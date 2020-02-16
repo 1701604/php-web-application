@@ -11,3 +11,17 @@ padding:9px 9px;
  width:300px; 
  border-radius:5px; 
 }
+/* update accordingly
+div {
+  row: 100px 3;
+}
+div {
+  column-grid: 100px 3;
+}
+div {
+  column left: 100px 3;
+}
+div {
+  column right: 100px 3;
+}
+*/
