@@ -31,41 +31,28 @@ if($numrows>0)
 	while($r=mysqli_fetch_array($result))
 	{
 		?>	
-		<div class="row">
-			<div class="column left">
-				<img src="<?echo $r["PlayerPicture"];?>" width="10%" height="80px">
-			</div>
-			<div class="column right">		
-				<?
+				<img src="<?echo $r["PlayerPicture"];?>" width="10%" height="80px">		
+					<?
 				echo "<a><h2>";
 				echo $r["PlayersName"]." ";
 				echo "</h2>";	
-				echo "<a><b>Info</b><br>";
-				echo $r["Description"]." ";	
+				echo "The Information: ";
+				echo $r["Description"]. "<br>";	
+				echo "The Nation: ";
+				echo $r["PlayersNation"]. "<br>";
 				echo "<br><br>";
-				echo "<b>Nation: </b>";
-				echo $r["PlayersNation"]." ";
-				echo "<br><br><b>Club: </b>";
-				echo $r["PlayersClub"]." ";
-				echo "</a><br>";	
 				?>
-			</div>
-		</div>
-		<br>
 		<?
 	}
 }
 else 
 {
 	?>
-	<div class="row">
 		<br>
 		<a>Nothing Found!!</a>
 		<br>
-	</div>
 	<?
 }
-	
 ?>
 	<br>
 	<form action="FootballPlayers.php" method="post">

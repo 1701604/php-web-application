@@ -3,7 +3,7 @@ include "top.php";
 ?>
 <center> <h1>Star Players</h1> </center> 
 
-	<div class="topnav"><center>
+<center>
   <a class="active" href="home.php"method="post">
 		<input type="submit" value="Home"></a>
 		
@@ -18,16 +18,13 @@ include "top.php";
 		
   <a href="login.php" method="post">
 		<input type="submit" value="Back to Login"></a>
-</center> </div>
+</center>
 	
 	<br><br><center><img src="starfootball.png" width="300" height="200"><br><br></center><br>
 	
 		
     <center> <h3> This Section Highlights The 3 Star Players Of The Month </h3> </center><br>
 
- 
-	<div class="row">
-		<div class = "column Grid">	
 			<?
 			require_once 'Star.php';
 			use \StarPlayers\Star;
@@ -52,8 +49,6 @@ include "top.php";
 			echo "Stars club is {$star->GetClub()}<br/>";
 			?>
 			<img src="ramsey.png" width="200" height="100"><br>
-		</div>
-	</div>
 <?
 include "bottom.php";
 ?>

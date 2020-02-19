@@ -10,7 +10,7 @@
 	$result = mysqli_query ($link, $query);
 
 	?>
-	<div class = "row"><a>
+	<a>
 	<?		
 		echo "Thank you for signing up and welcome!";
 		
@@ -18,4 +18,3 @@
 		<form action="home.php" method="post">
 			<input type="submit" value="Home">
 		</form></a>
-	</div>		

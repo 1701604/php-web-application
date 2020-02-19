@@ -4,7 +4,7 @@ include "top.php";
 
 <center> <h1>Home Page</h1> </center> 
 
-	<div class="topnav"><center>
+<center>
   <a class="active" href="home.php"method="post">
 		<input type="submit" value="Home"></a>
 		
@@ -19,7 +19,7 @@ include "top.php";
 		
   <a href="login.php" method="post">
 		<input type="submit" value="Back to Login"></a>
-</center> </div>
+</center>
 	
 	<br><br><center><img src="football.png" width="300" height="200"><br><br></center>
 	

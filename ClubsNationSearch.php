@@ -5,6 +5,7 @@ include "coninfo.php";
 $fc = $_POST["f1"];
 
 $query="SELECT * FROM footballclubs WHERE ClubsNation like ";
+$query2 = "INSERT INTO logsearch (searchBar, page) VALUES ('$fc', 'footballclubs')";
 
 if($fc == 'W')
 {
@@ -31,42 +32,33 @@ if($numrows>0)
 	while($r=mysqli_fetch_array($result))
 	{
 		?>	
-		<div class="row">
-			<div class="column left">
-				<img src="<?echo $r["ClubPicture"];?>" width="10%" height="80px">
-			</div>
-			<div class="column right">		
+				<img src="<?echo $r["ClubPicture"];?>" width="10%" height="80px">		
 				<?
 				echo "<a><h2>";
 				echo $r["ClubsName"]." ";
 				echo "</h2>";	
-				echo "<a><b>Info</b><br>";
-				echo $r["Description"]." ";	
+				echo "The Information: ";
+				echo $r["Description"]. "<br>";	
+				echo "The Nation: ";
+				echo $r["ClubsNation"]. "<br>";
 				echo "<br><br>";
-				echo "<b>Nation: </b>";
-				echo $r["ClubsNation"]." ";
-				echo "<br><br>";	
 				?>
-			</div>
-		</div>
-		<br>
 		<?
 	}
 }
+
 else 
 {
 	?>
-	<div class="row">
 		<br>
 		<a>Nothing Found!!</a>
 		<br>
-	</div>
 	<?
 }
-	
+$result = mysqli_query ($link, $query2);
 ?>
 	<br>
 	<form action="FootballClubs.php" method="post">
 		<input type="submit" value="Go Back">
 	</form>
-<?	
+<?
